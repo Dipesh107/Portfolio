@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipesh Patil | Portfolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/ff14eec93e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Landing Page Section  -->
+  <section class="main">
+    <div>
+      <nav>
+        <h1 class="dsp" style="cursor: pointer;">DSP<a class="arrow" href="">&#8599;</a></h1>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+          <em>Dark Mode!</em>
+        </div>
+      </nav>
+    </div>
+    <div class="hello">
+      <span class="h1">
+        <h1>Hello!</h1>
+      </span>
+      <br>
+      <div class="dis-close">
+        <p> I am Dipesh
+          <span class="patil">Patil</span>.
+        </p>
+        <br>
+        <p>
+          <span>An Emerging Web Developer <i class="fas fa-code"></i></span>
+        </p>
+        <br>
+        <p>
+          <span>Data Science in Python <i class="fab fa-python"></i> Enthusiast!</span>
+        </p>
+      </div>
+      <a href="/contact"><button class="btn">CONTACT ME</button></a>
+      <a href="mailto:dipeshpatil013@gmail.com"><button class="btn">GMAIL <i class="fas fa-envelope"></i></button></a>
+
+    </div>
+    <div class="img">
+      <img id="click" src="/images/clickme.png" alt="vibe" onclick="switchImage()">
+    </div>
+  </section>
+
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about">
+    <p class="about-me"><b> ABOUT ME </b></p>
+    <div class="about-img">
+      <img id="click2" src="/images/hii-glider.png" alt="" onclick="switchImage2()" style="cursor: pointer;">
+    </div>
+    <div class="info">
+      <span class="mentions"><b class="bolds">College</b> : Ramrao Adik Institute of Technology. <a
+          href="http://www.dypatil.edu/mumbai/rait/" target="_blank"><i class="fas fa-university"></i></a>
+      </span><br>
+      <span class="mentions"><b class="bolds">Education</b> : Currently pursuing IT Engineering.</span><br>
+      <span class="mentions"><b class="bolds">Living</b> : Born and Raised in Jalgaon,Maharashtra <a
+          href="https://www.mapsofindia.com/maps/maharashtra/districts/jalgaon.htm" target="_blank"><i
+            class="fa fa-map-marker"></i></a> but currently staying
+        in Mumbai. <br> (PS: I was raised in Maharashtra and yes i do have accent &#128514;).</span><br>
+      <span class="mentions"><b class="bolds">Career and Intrests</b> :
+        <li>Following my career in Web Developement and learning REACT.</li>
+        <li>Enthusiats of Data Science in Python.</li>
+      </span>
+      <span class="mentions"><b class="bolds">Hobbies</b> :
+        <li>Cricket</li>
+        <li>Watching Football. (Hallas Germany &#128521)</li>
+        <li>Simping Around</li>
+      </span><br>
+    </div>
+  </section>
+
+  <section class="work">
+
+  </section>
+
+
+  <!-- Footer Section -->
+  <section class="footer">
+    <ul>
+      <li><a href="#"><i class="fab fa-github-square"></i>GitHub</a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+    </ul>
+  </section>
+
+  <script>
+    var imageToggle = document.getElementById("click");
+    function switchImage() {
+      imageToggle.src = "/images/vibe.png";
+    }
+
+    var imageToggle2 = document.getElementById("click2");
+    function switchImage2() {
+      imageToggle2.src = "/images/bit1.png";
+    }
+
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+      }
+    }
+  </script>
+</body>
+
+</html>
+
+<!-- <span> -->
+<!-- Checkout my Projects. -->
+<!-- </span> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><img src="" alt="dope-web"><span>Dope Web - Dipesh Patil.</span></a></li> -->
+<!-- </ul> -->
