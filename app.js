@@ -17,17 +17,17 @@ app.get("/contact", function (req, res) {
   res.render("contact");
 });
 
-app.post("/contact", function (res, req) {
-  username = req.body.fullName;
-  email = req.body.email;
-  message = req.body.message;
-
-  console.log(username);
-  console.log(email);
-  console.log(message);
-
-  req.redirect("index")
-});
+// app.post("/contact", function (res, req) {
+// username = req.body.fullName;
+// email = req.body.email;
+// message = req.body.message;
+// 
+// console.log(username);
+// console.log(email);
+// console.log(message);
+// 
+// req.redirect("index")
+// });
 
 // app.get("/work", function (req, res) {
 // res.render("work");
