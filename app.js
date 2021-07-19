@@ -25,11 +25,13 @@ app.post("/contact", function (res, req) {
   console.log(username);
   console.log(email);
   console.log(message);
+
+  req.redirect("index")
 });
 
-app.get("/work", function (req, res) {
-  res.render("work");
-});
+// app.get("/work", function (req, res) {
+// res.render("work");
+// });
 
 
 app.listen(port, function (req, res) {

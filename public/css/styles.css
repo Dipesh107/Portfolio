@@ -264,3 +264,43 @@ input:checked + .slider:before {
   border-color: #fff;
 }
 
+@media screen and (max-width: 1500px) {
+  .about-me {
+    padding-top: 4%;
+  }
+}
+
+@media screen and (max-width: 1305px) {
+  .about-me {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media  screen and (max-width: 1070px) {
+  .footer {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .footer {
+    margin-top: 6%;
+  }
+}
+
+@media screen and (max-width: 1038px) {
+  .about-me {
+    margin-top: 10%;
+  }
+  .dis-close {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 974px) {
+  .about-me {
+    margin-top: 4%;
+  }
+}
